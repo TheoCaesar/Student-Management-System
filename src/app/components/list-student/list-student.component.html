@@ -1,0 +1,19 @@
+<p>list-student works!</p>
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor='let student of studentsOBJs'>
+      <th scope="row">{{student.id}}</th>
+      <td>{{student.name}}</td>
+      <td>{{student.email}}</td>
+      <td><span routerLink="edit/{{student.id}}">Edit</span></td>
+      <td><span (click)="deletefxn(student.id)">Delete</span></td>
+    </tr>
+  </tbody>
+</table>
